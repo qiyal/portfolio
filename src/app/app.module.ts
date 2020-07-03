@@ -7,14 +7,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './core/shared/header/header.component';
 import {AboutModule} from './core/layout/about/about.module';
-import { CircleDiagramComponent } from './core/shared/circle-diagram/circle-diagram.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    HeaderComponent,
-    CircleDiagramComponent
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -23,6 +21,7 @@ import { CircleDiagramComponent } from './core/shared/circle-diagram/circle-diag
     BrowserAnimationsModule
   ],
   providers: [],
+  exports: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
