@@ -5,6 +5,7 @@ import {HomeComponent} from './home/home.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
+  {path: 'about', loadChildren: () => import('./core/layout/about/about.module').then(m => m.AboutModule)},
   {path: '', redirectTo: 'home', pathMatch: 'full'}
 ];
 

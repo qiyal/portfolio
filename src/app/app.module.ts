@@ -6,18 +6,18 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './core/shared/header/header.component';
-import { AboutComponent } from './about/about.component';
+import {AboutModule} from './core/layout/about/about.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    HeaderComponent,
-    AboutComponent
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    AboutModule,
     BrowserAnimationsModule
   ],
   providers: [],
