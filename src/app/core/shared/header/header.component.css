@@ -11,15 +11,66 @@ header {
   color: #fff;
 }
 
-.link {
-  color: #fff;
-  text-decoration: none;
-  font-size: 16px;
-  line-height: 19px;
-  margin: 0 22px;
+nav {
+  display: flex;
+  align-items: center;
 }
 
-.r {
+.link, .link-info {
+  width: auto;
+  color: #fff;
+  text-decoration: none;
+  margin: 0 22px;
+  position: relative;
+  display: inline-block;
+}
+
+.link {
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.link:after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 4px;
+  background-color: #fff;
+  position: absolute;
+  transition: width .3s ease-in-out;
+  transform-origin: left;
+}
+
+.link:hover:after {
+  width: 100%;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+}
+
+.link-info {
   font-size: 14px;
   line-height: 16px;
+  cursor: pointer;
+}
+
+.link-info:hover {
+  text-decoration: underline;
+}
+
+.link.active {
+  color: #BF4DC1;
+  font-weight: bold;
+  position: relative;
+}
+
+.link.active:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #BF4DC1;
+  position: absolute;
 }
