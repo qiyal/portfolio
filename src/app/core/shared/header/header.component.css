@@ -1,0 +1,25 @@
+header {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 25px;
+  position: absolute;
+  top: 0;
+  color: #fff;
+}
+
+.link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 19px;
+  margin: 0 22px;
+}
+
+.r {
+  font-size: 14px;
+  line-height: 16px;
+}
