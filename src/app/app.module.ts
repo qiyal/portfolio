@@ -7,20 +7,20 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './core/shared/header/header.component';
 import {AboutModule} from './core/layout/about/about.module';
-import { FooterComponent } from './core/shared/footer/footer.component';
+import {FooterModule} from './core/layout/footer/footer.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    HeaderComponent,
-    FooterComponent
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AboutModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FooterModule
   ],
   providers: [],
   exports: [],

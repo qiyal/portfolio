@@ -8,6 +8,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {CircleDiagramComponent} from '../../shared/circle-diagram/circle-diagram.component';
 import {FormsModule} from '@angular/forms';
 import {SliderComponent} from '../../shared/slider/slider.component';
+import {FooterModule} from '../footer/footer.module';
 
 const routes: Routes = [
   { path: '', component: AboutComponent}
@@ -25,10 +26,10 @@ const routes: Routes = [
     MatButtonModule,
     MatIconModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    FooterModule
   ],
   exports: [
-    RouterModule
   ]
 })
 export class AboutModule { }
