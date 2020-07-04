@@ -1,0 +1,144 @@
+.container {
+  width: 100%;
+  min-height: 100%;
+  background-color: #000;
+  color: #fff;
+  padding-top: 80px;
+  box-sizing: border-box;
+}
+
+.content {
+  /*border: 1px solid yellow;*/
+  box-sizing: border-box;
+}
+
+.title {
+  font-size: 30px;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  color: #000;
+}
+
+.title span {
+  background-color: #fff;
+  padding: 10px 20px;
+}
+
+.main-info-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  box-sizing: border-box;
+  margin: 50px 45px 0;
+}
+
+.img-box {
+  width: 505px;
+  height: 505px;
+  margin-top: 30px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.avatar-img, .white-fon {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.avatar-img {
+  z-index: 10;
+  background-color: darkorange;
+  left: 0;
+  bottom: 0;
+}
+
+.white-fon {
+  z-index: 9;
+  background-color: white;
+  left: 10px;
+  bottom: -10px;
+}
+
+.content-box {
+  width: calc(100% - 580px);
+  box-sizing: border-box;
+}
+
+.content-box-child {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px 25px;
+  background-color: white;
+  color: #000;
+  margin-bottom: 43px;
+}
+
+.content-title {
+  color: #000;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 47px;
+}
+
+.flex-div {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  margin-top: 25px;
+}
+
+.child {
+  width: 45%;
+}
+
+.childv2 {
+  width: 23%;
+}
+
+.child p span {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.content-box-child p {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.download_cv {
+  height: 42px;
+  background-color: #BF4DC1;
+  color: #fff;
+  margin-top: 20px;
+  border-radius: 21px;
+}
+
+.download_cv mat-icon {
+  margin-right: 9px;
+}
+
+.title-v2 {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: bold;
+  color: #000;
+  background-color: #fff;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 30px;
+  margin-left: 70px;
+  margin-bottom: 50px;
+}
+
+.box {
+  margin-bottom: 100px;
+}
+
+
+
+
+
