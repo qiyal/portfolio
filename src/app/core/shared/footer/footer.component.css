@@ -1,0 +1,49 @@
+footer {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 40px 30px;
+}
+
+.flex-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  /*border: 1px solid red;*/
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.info-block, .link-block, .soc-block {
+  box-sizing: border-box;
+  /*border: 1px solid green;*/
+}
+
+.link-block {
+  transform: translateY(-10px);
+}
+
+.info-block a {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0 20px;
+  cursor: pointer;
+}
+
+.link-block a {
+  font-family: 'Reem Kufi', sans-serif;
+  font-size: 16px;
+  margin: 0 12px;
+  cursor: pointer;
+}
+
+.soc-block a {
+  font-family: 'Reem Kufi', sans-serif;
+  font-size: 16px;
+  margin: 0 20px;
+  cursor: pointer;
+}
