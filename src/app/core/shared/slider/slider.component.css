@@ -1,0 +1,93 @@
+.slider {
+  width: 100%;
+  border: 1px solid red;
+  border-top: 1px solid #fff;
+  box-sizing: border-box;
+  padding: 0 70px;
+  font-size: 16px;
+  color: #fff;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.cards-box {
+  display: flex;
+  align-items: start;
+  /*justify-content: space-between;*/
+  width: 80%;
+  box-sizing: border-box;
+  /*border: 1px solid red;*/
+  margin-top: -23px;
+  padding-top: 20px;
+  overflow: hidden;
+}
+
+.slider-move {
+  margin-left: -280px;
+}
+
+.card {
+  flex-basis: 250px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  /*border: 1px solid green;*/
+  position: relative;
+  margin-top: 30px;
+  margin-right: 30px;
+  transition: all 600ms ease-in-out;
+}
+
+.card:after {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: 1px solid #fff;
+  position: absolute;
+  top: -45px;
+  left: 0;
+  background-color: #000;
+}
+
+.card-date {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 500;
+}
+
+.card-title {
+  font-family: 'Roboto Mono', sans-serif;
+  color: #A4A0A0;
+}
+
+.card-description {
+  font-family: 'Roboto', sans-serif;
+}
+
+.actions-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90px;
+  box-sizing: border-box;
+  transform: translateY(-18.5px);
+}
+
+.actions-box button {
+  width: 37px;
+  height: 37px;
+  background-color: #000;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.actions-box mat-icon {
+  color: #fff;
+  box-sizing: border-box;
+}
