@@ -1,1 +1,54 @@
-<p>contact works!</p>
+<div class="container">
+  <div class="content">
+    <h1 class="title"><span>Contacts</span></h1>
+    <div class="flex-box">
+
+      <div class="map-box">
+
+      </div>
+
+      <div class="contact-box">
+
+        <div class="info-box">
+
+          <div class="info-card">
+            <mat-icon>place</mat-icon>
+            <p>Location</p>
+            <small>Manasa Street 8</small>
+            <small>Almaty, Kazakhstan 050000</small>
+          </div>
+
+          <div class="info-card">
+            <mat-icon>call</mat-icon>
+            <p>Phone</p>
+            <small>+7-(705)-262-79-72</small>
+          </div>
+
+          <div class="info-card">
+            <mat-icon>alternate_email</mat-icon>
+            <p>Email</p>
+            <small>@twinspazyl@gmail.com</small>
+          </div>
+        </div>
+
+        <div class="form-box">
+          <h2>Contacts Form</h2>
+          <form [formGroup]="form">
+            <div class="inputs-box">
+              <div class="left-inputs">
+                <input type="text" formControlName="name" placeholder="Name">
+                <input type="email" formControlName="email" placeholder="Email">
+                <input type="text" formControlName="subject" placeholder="Subject">
+              </div>
+              <div class="right-inputs">
+                <textarea type="text" formControlName="text" placeholder="Message..."></textarea>
+              </div>
+            </div>
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</div>
