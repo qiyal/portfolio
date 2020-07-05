@@ -2,6 +2,7 @@ footer {
   width: 100%;
   box-sizing: border-box;
   padding: 0 40px 30px;
+  position: relative;
 }
 
 .flex-block {
@@ -9,7 +10,6 @@ footer {
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
-  /*border: 1px solid red;*/
 }
 
 a {
@@ -19,7 +19,6 @@ a {
 
 .info-block, .link-block, .soc-block {
   box-sizing: border-box;
-  /*border: 1px solid green;*/
 }
 
 .link-block {
@@ -47,3 +46,22 @@ a {
   margin: 0 20px;
   cursor: pointer;
 }
+
+.copy-right-box {
+  position: absolute;
+  left: 0;
+  bottom: 210px;
+  height: 30px;
+  background-color: #BF4DC1;
+  font-family: 'Quicksand', sans-serif;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 0 8px;
+  font-size: 12px;
+  transform: rotate(90deg);
+  transform-origin: left bottom;
+}
+
+
