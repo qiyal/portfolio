@@ -1,7 +1,7 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 import {FooterComponent} from '../../shared/footer/footer.component';
-
+import {RouterModule} from '@angular/router';
 
 
 @NgModule({
@@ -11,8 +11,10 @@ import {FooterComponent} from '../../shared/footer/footer.component';
   exports: [
     FooterComponent
   ],
-  imports: [
-    CommonModule
-  ]
+    imports: [
+        CommonModule,
+        RouterModule,
+    ]
 })
-export class FooterModule { }
+export class FooterModule {
+}
