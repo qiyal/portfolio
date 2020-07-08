@@ -1,0 +1,98 @@
+.slider {
+  width: 100%;
+  /*height: 298px;*/
+  box-sizing: border-box;
+  padding: 0 60px;
+  position: relative;
+  margin-top: 55px;
+  margin-bottom: 50px;
+  overflow-x: hidden;
+}
+
+.slider-body {
+  width: 100%;
+  height: 298px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.slider-card {
+  flex-basis: 417px;
+  box-sizing: border-box;
+  font-family: 'Red Hat Display', sans-serif;
+  margin-right: 72px;
+  transition: all 0.5s;
+}
+
+.card-img {
+  width: 417px;
+  height: 234px;
+  overflow: hidden;
+}
+
+.card-footer {
+  width: 100%;
+  height: 64px;
+  box-sizing: border-box;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transform-origin: top;
+  overflow: hidden;
+}
+
+.card-footer div {
+  font-size: 20px;
+}
+
+.left-btn, .right-btn {
+  width: 37px;
+  height: 37px;
+  background-color: #000;
+  border: 1px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+
+.left-btn {
+  top: calc(50% - 18.5px);
+  left: 10px;
+}
+
+.right-btn {
+  top: calc(50% - 18.5px);
+  right: 10px;
+}
+
+.left-btn mat-icon, .right-btn mat-icon {
+  color: #fff;
+  box-sizing: border-box;
+}
+
+.move-left {
+  margin-left: calc(-489px);
+}
+
+.card-img p {
+  position: absolute;
+}
+
+
+.open {
+  animation-name: open-footer;
+  animation-duration: 1s;
+}
+
+@keyframes open-footer {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
