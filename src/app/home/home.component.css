@@ -23,13 +23,13 @@
   font-family: 'Roboto Mono', monospace;
   font-weight: 400;
   font-size: 50px;
-  line-height: 59px;
 }
 
 .follow-me-box {
   width: auto;
   padding: 10px;
-  height: 25px;
+  max-height: 25px;
+  min-height: 15px;
   display: flex;
   align-items: center;
   color: #fff;
@@ -44,7 +44,6 @@
 .text {
   margin: 0;
   font-size: 14px;
-  line-height: 16px;
 }
 
 .line {
@@ -108,3 +107,33 @@
   background: url("../../assets/icons/home/vk_w.svg");
 }
 
+@media (max-width: 550px) {
+  .name {
+    font-size: 40px;
+  }
+
+  .follow-me-box {
+    bottom: 180px;
+  }
+
+  .soc .link {
+    width: 15px;
+    height: 15px;
+  }
+
+  .text {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 450px) {
+  .name {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 400px) {
+  .name {
+    font-size: 30px;
+  }
+}
