@@ -1,4 +1,5 @@
 header {
+  min-width: 360px;
   width: 100%;
   height: 70px;
   display: flex;
@@ -14,6 +15,7 @@ header {
 nav {
   display: flex;
   align-items: center;
+  box-sizing: border-box;
 }
 
 .link, .link-info {
@@ -27,7 +29,6 @@ nav {
 
 .link {
   font-size: 16px;
-  line-height: 19px;
 }
 
 .link:after {
@@ -52,7 +53,6 @@ nav {
 
 .link-info {
   font-size: 14px;
-  line-height: 16px;
   cursor: pointer;
 }
 
@@ -73,4 +73,31 @@ nav {
   height: 4px;
   background-color: #BF4DC1;
   position: absolute;
+}
+
+@media (max-width: 900px) {
+  header {
+    justify-content: center;
+  }
+
+  nav {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .info {
+    display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .link {
+    font-size: 14px;
+  }
+  nav {
+    justify-content: space-between;
+  }
+  .link {
+    margin: 0;
+  }
 }
