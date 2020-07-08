@@ -10,7 +10,7 @@
 .content {
   min-width: 100%;
   box-sizing: border-box;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .title {
@@ -41,7 +41,7 @@
   width: 505px;
   height: 505px;
   background-color: #fff;
-  margin-top: 15px;
+  margin-top: 2px;
 }
 
 .contact-box {
