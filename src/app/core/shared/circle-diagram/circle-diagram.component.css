@@ -20,7 +20,8 @@
   height: 100%;
   z-index: 3;
   background-color: #fff;
-  animation: mask_left 5s steps(1, end) forwards;
+  /*animation*/
+  animation: mask_left90 5s steps(1, end) forwards;
 }
 
 .timer:after {
@@ -32,7 +33,8 @@
   height: 100%;
   z-index: 3;
   background-color: #BF4DC1;
-  animation: mask_right 5s steps(1, end) forwards;
+  /*animation*/
+  animation: mask_right90 5s steps(1, end) forwards;
 }
 
 .timer_line {
@@ -42,7 +44,8 @@
   width: 100%;
   height: 100%;
   z-index: 2;
-  animation: line 5s linear forwards;
+  /*animation*/
+  animation: line90 5s linear forwards;
 }
 
 .timer_line:after {
@@ -83,7 +86,7 @@
   font-size: 22px;
 }
 
-@keyframes line {
+@keyframes line90 {
   0% {
   }
   100% {
@@ -91,7 +94,7 @@
   }
 }
 
-@keyframes mask_left {
+@keyframes mask_left90 {
   0% {
     visibility: visible;
   }
@@ -100,12 +103,63 @@
   }
 }
 
-@keyframes mask_right {
+@keyframes mask_right90 {
   0% {
     visibility: hidden;
   }
   55%, 100% {
     visibility: visible;
   }
+}
 
+@keyframes line80 {
+  0% {
+  }
+  100% {
+    transform: rotate(288deg);
+  }
+}
+
+@keyframes mask_left80 {
+  0% {
+    visibility: visible;
+  }
+  60%, 100% {
+    visibility: hidden;
+  }
+}
+
+@keyframes mask_right80 {
+  0% {
+    visibility: hidden;
+  }
+  60%, 100% {
+    visibility: visible;
+  }
+}
+
+@keyframes line70 {
+  0% {
+  }
+  100% {
+    transform: rotate(252deg);
+  }
+}
+
+@keyframes mask_left70 {
+  0% {
+    visibility: visible;
+  }
+  65%, 100% {
+    visibility: hidden;
+  }
+}
+
+@keyframes mask_right70 {
+  0% {
+    visibility: hidden;
+  }
+  65%, 100% {
+    visibility: visible;
+  }
 }

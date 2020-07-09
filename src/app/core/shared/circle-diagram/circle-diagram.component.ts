@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {Skill} from '../../../model/skill';
 
 @Component({
   selector: 'app-circle-diagram',
@@ -8,33 +9,18 @@ import {Component, Input, OnInit} from '@angular/core';
 export class CircleDiagramComponent implements OnInit {
   value = 0;
   timer;
-  true90 = false;
-  true85 = false;
-  true80 = false;
-  @Input() inputValue: number;
-  @Input() title: string;
+  @Input() skill: Skill;
 
   constructor() {
   }
 
   ngOnInit(): void {
     this.startTimer();
-    this.setAnimation();
-  }
-
-  setAnimation() {
-    if (this.inputValue === 90) {
-      this.true90 = true;
-    } else if (this.inputValue === 85) {
-      this.true85 = true;
-    } else if (this.inputValue === 80) {
-      this.true80 = true;
-    }
   }
 
   startTimer() {
     this.timer = setInterval(() => {
-      if (this.value === this.inputValue) {
+      if (this.value === this.skill.percentage) {
         this.stopTimer();
       } else {
         this.value++;
