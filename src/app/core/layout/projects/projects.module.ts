@@ -5,14 +5,16 @@ import {ProjectsRoutingModule} from './projects-routing/projects-routing.module'
 import {MatIconModule} from '@angular/material/icon';
 import {FooterModule} from '../footer/footer.module';
 import {SliderV2Component} from '../../shared/slider-v2/slider-v2.component';
+import {ProjectCardComponent} from '../../shared/project-card/project-card.component';
 
 
 
 @NgModule({
-  declarations: [
-    ProjectsComponent,
-    SliderV2Component
-  ],
+    declarations: [
+        ProjectsComponent,
+        SliderV2Component,
+        ProjectCardComponent
+    ],
     imports: [
         CommonModule,
         ProjectsRoutingModule,
