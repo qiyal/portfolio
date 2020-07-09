@@ -16,12 +16,12 @@
           <p>I am Bako Doe, web developer from London, United Kingdom. I have rich  experience in web site design and building and customization, also I am good at wordpress.</p>
           <div class="flex-div">
             <div class="child">
-              <p><span>Name:</span>Yerbolat Pazyl</p>
-              <p><span>Birthday:</span>26 January, 2000</p>
+              <p><span>Name:</span>{{user.firstName}} {{user.lastName}}</p>
+              <p><span>Birthday:</span>{{user.birthday | date}}</p>
             </div>
             <div class="child">
-              <p><span>Location:</span>Almaty City, Kazakhstan</p>
-              <p><span>Email:</span>twinspazyl@gmail.com</p>
+              <p><span>Location:</span>{{user.city}} City, {{user.country}}</p>
+              <p><span>Email:</span>{{user.email}}</p>
             </div>
           </div>
           <button mat-raised-button class="download_cv"><mat-icon svgIcon="download_custom" aria-hidden="false" aria-label="download file icon"></mat-icon>Download CV</button>
@@ -31,21 +31,18 @@
           <h2 class="content-title">My skills</h2>
           <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated  they live in Bookmarksgrove right at the coast of the Semantics</p>
           <div class="flex-div">
-            <app-circle-diagram [inputValue]="90" [title]="'JAVA'"></app-circle-diagram>
-            <app-circle-diagram [inputValue]="80" [title]="'PHP / MySQL'"></app-circle-diagram>
-            <app-circle-diagram [inputValue]="85" [title]="'Angular / JavaScript'"></app-circle-diagram>
-            <app-circle-diagram [inputValue]="90" [title]="'HTML / CSS'"></app-circle-diagram>
+            <app-circle-diagram *ngFor="let skill of skills" [skill]="skill"></app-circle-diagram>
           </div>
         </div>
       </div>
     </div>
     <div class="box">
       <h2 class="title-v2">Education</h2>
-      <app-slider></app-slider>
+      <app-slider [cardElementsArr]="dataCardEducation" [length]="dataCardEducation.length"></app-slider>
     </div>
     <div class="box">
       <h2 class="title-v2">Experience</h2>
-      <app-slider></app-slider>
+      <app-slider [cardElementsArr]="dataCardExperience" [length]="dataCardExperience.length"></app-slider>
     </div>
   </div>
   <app-footer></app-footer>
