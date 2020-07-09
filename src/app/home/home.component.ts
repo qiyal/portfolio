@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {DataControlService} from '../core/service/data-control.service';
 
 @Component({
   selector: 'app-home',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  user: any[];
 
-  constructor() { }
+  constructor(private service: DataControlService) { }
 
   ngOnInit(): void {
+    this.service.getUserInfo().subscribe(res => {
+      this.user = res;
+    });
   }
 
 }
