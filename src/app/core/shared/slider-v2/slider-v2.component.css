@@ -5,7 +5,7 @@
   padding: 0 60px;
   position: relative;
   margin-top: 55px;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
   overflow-x: hidden;
 }
 
@@ -88,6 +88,11 @@
   animation-duration: 1s;
 }
 
+.card-move-top {
+  animation-name: card-top-move;
+  animation-duration: 1s;
+}
+
 @keyframes open-footer {
   0% {
     transform: scaleY(0);
@@ -96,3 +101,12 @@
     transform: scaleY(1);
   }
 }
+
+@keyframes card-top-move {
+  0% {
+  }
+  100% {
+    transform: translateY(-32px);
+  }
+}
+

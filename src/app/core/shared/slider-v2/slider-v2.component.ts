@@ -6,10 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./slider-v2.component.css']
 })
 export class SliderV2Component implements OnInit {
-  length = 9;
   showCardIndex = 2;
   page = 2;
   marginIndex = 0;
+  moveTop = false;
 
   constructor() { }
 
