@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup} from '@angular/forms';
+import {User} from '../model/user';
+import {DataControlService} from '../core/service/data-control.service';
 
 @Component({
   selector: 'app-contact',
@@ -8,7 +10,9 @@ import {FormControl, FormGroup} from '@angular/forms';
 })
 export class ContactComponent implements OnInit {
   form: FormGroup;
-  constructor() { }
+  user: User;
+
+  constructor(private service: DataControlService) { }
 
   ngOnInit(): void {
     this.form = new FormGroup({
@@ -17,6 +21,9 @@ export class ContactComponent implements OnInit {
       subject: new FormControl(''),
       text: new FormControl('')
     });
+    this.service.getUserInfo().subscribe(res => {
+      this.user = res;
+    })
   }
 
 }
