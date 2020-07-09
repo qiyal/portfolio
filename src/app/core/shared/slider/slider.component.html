@@ -1,34 +1,9 @@
 <div class="slider">
   <div class="cards-box">
-    <div class="card" [ngClass]="{'slider-move': noneArr[0]}">
-      <p class="card-date">2007-2018</p>
-      <p class="card-title">#59 gymnasium school</p>
-      <p class="card-description">I studied very good, every day understanding all topic</p>
-    </div>
-    <div class="card" [ngClass]="{'slider-move': noneArr[1]}">
-      <p class="card-date">2018</p>
-      <p class="card-title">IITU Courses C++</p>
-      <p class="card-description">I studied C++ language very good, every day decided 100 tasks </p>
-    </div>
-    <div class="card" [ngClass]="{'slider-move': noneArr[2]}">
-      <p class="card-date">2018 - present</p>
-      <p class="card-title">Bachelor Information Systems</p>
-      <p class="card-description">I studied courses very good, every day do dedlain in time </p>
-    </div>
-    <div class="card" [ngClass]="{'slider-move': noneArr[3]}">
-      <p class="card-date">2020</p>
-      <p class="card-title">Angular Freamwork</p>
-      <p class="card-description">I studied angular very good, every day try do tasks</p>
-    </div>
-    <div class="card" [ngClass]="{'slider-move': noneArr[4]}">
-      <p class="card-date">2020</p>
-      <p class="card-title">Angular Freamwork</p>
-      <p class="card-description">I studied angular very good, every day try do tasks</p>
-    </div>
-    <div class="card" [ngClass]="{'slider-move': noneArr[5]}">
-      <p class="card-date">2020</p>
-      <p class="card-title">Angular Freamwork</p>
-      <p class="card-description">I studied angular very good, every day try do tasks</p>
+    <div class="card" *ngFor="let card of cardElementsArr; let i = index" [ngClass]="{'slider-move': noneArr[i]}">
+      <p class="card-date">{{card.yearStart}} - {{card.yearFinish}}</p>
+      <p class="card-title">{{card.title}}</p>
+      <p class="card-description">{{card.text}}</p>
     </div>
   </div>
   <div class="actions-box">

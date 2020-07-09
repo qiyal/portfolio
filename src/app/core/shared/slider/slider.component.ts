@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Education} from '../../../model/education';
 
 @Component({
   selector: 'app-slider',
@@ -7,13 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SliderComponent implements OnInit {
   noneArr;
-  length: number;
+  @Input() length: number;
   index = 0;
+  @Input() cardElementsArr: any[];
 
   constructor() { }
 
   ngOnInit(): void {
-    this.length = 6;
     this.noneArr = new Array(this.length);
     console.log("None 0: " + this.noneArr[0]);
     console.log("Index: " + this.index);
