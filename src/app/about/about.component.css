@@ -54,6 +54,10 @@
   bottom: 0;
 }
 
+.avatar-img img {
+  width: 100%;
+}
+
 .white-fon {
   z-index: 9;
   background-color: white;

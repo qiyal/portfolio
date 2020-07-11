@@ -30,6 +30,7 @@
   width: 417px;
   height: 234px;
   overflow: hidden;
+  position: relative;
 }
 
 .card-footer {
@@ -78,10 +79,22 @@
   margin-left: calc(-489px);
 }
 
-.card-img p {
+.card-img .card-text {
   position: absolute;
+  bottom: 20px;
+  left: 30px;
 }
 
+.text1 {
+  color: #fff;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 20px;
+}
+
+.text2 {
+  color: #fff;
+  font-family: 'Roboto Mono', monospace;
+}
 
 .open {
   animation-name: open-footer;
