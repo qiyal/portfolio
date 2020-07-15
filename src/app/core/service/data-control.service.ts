@@ -27,4 +27,12 @@ export class DataControlService {
   getAllSkills(): Observable<any> {
     return this.http.get(this.api + '/skills');
   }
+
+  getAllProjects(): Observable<any> {
+    return this.http.get(this.api + '/projects');
+  }
+
+  sendMessage(message: any) {
+    return this.http.post(this.api + '/sent/email', message);
+  }
 }

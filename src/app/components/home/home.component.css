@@ -13,7 +13,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url("../../../src/assets/images/home/gif-0.gif") no-repeat center center;
+  background: url("../../../assets/images/home/gif-0.gif") no-repeat center center;
   background-size: cover;
   position: relative;
 }
@@ -87,43 +87,43 @@
 }
 
 .linkedin {
-  background: url("../../assets/icons/home/linkedin_white.svg");
+  background: url("../../../assets/icons/home/linkedin_white.svg");
 }
 
 .linkedin:hover {
-  background: url("../../assets/icons/home/linkedin.svg");
+  background: url("../../../assets/icons/home/linkedin.svg");
 }
 
 .github {
-  background: url("../../assets/icons/home/github-black.svg");
+  background: url("../../../assets/icons/home/github-black.svg");
 }
 
 .github:hover {
-  background: url("../../assets/icons/home/github-white.svg");
+  background: url("../../../assets/icons/home/github-white.svg");
 }
 
 .vk {
-  background: url("../../assets/icons/home/vk_b.svg");
+  background: url("../../../assets/icons/home/vk_b.svg");
 }
 
 .vk:hover {
-  background: url("../../assets/icons/home/vk_w.svg");
+  background: url("../../../assets/icons/home/vk_w.svg");
 }
 
 .instagram {
-  background: url("../../assets/icons/home/instagram_b.svg");
+  background: url("../../../assets/icons/home/instagram_b.svg");
 }
 
 .instagram:hover {
-  background: url("../../assets/icons/home/instagram_w.svg");
+  background: url("../../../assets/icons/home/instagram_w.svg");
 }
 
 .mail {
-  background: url("../../assets/icons/home/gmail1.svg");
+  background: url("../../../assets/icons/home/gmail1.svg");
 }
 
 .mail:hover {
-  background: url("../../assets/icons/home/gmail.svg");
+  background: url("../../../assets/icons/home/gmail.svg");
 }
 
 @media (max-width: 550px) {

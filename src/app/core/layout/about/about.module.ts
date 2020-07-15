@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {AboutComponent} from '../../../about/about.component';
+import {AboutComponent} from '../../../components/about/about.component';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {CircleDiagramComponent} from '../../shared/circle-diagram/circle-diagram.component';

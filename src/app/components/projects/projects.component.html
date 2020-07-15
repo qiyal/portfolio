@@ -42,22 +42,27 @@
           <div class="filter-values-box">
 
             <div class="filter-value">
-              <button><span></span></button>
+              <button (click)="filterSet('all')"><span [ngClass]="{'active-filter': filter === 'all'}"></span></button>
+              <p>All</p>
+            </div>
+
+            <div class="filter-value">
+              <button (click)="filterSet('bot')"><span [ngClass]="{'active-filter': filter === 'bot'}"></span></button>
               <p>Bots</p>
             </div>
 
             <div class="filter-value">
-              <button><span></span></button>
+              <button (click)="filterSet('game')"><span [ngClass]="{'active-filter': filter === 'game'}"></span></button>
               <p>Games</p>
             </div>
 
             <div class="filter-value">
-              <button><span></span></button>
+              <button (click)="filterSet('desktop app')"><span [ngClass]="{'active-filter': filter === 'desktop app'}"></span></button>
               <p>Desktop Apps</p>
             </div>
 
             <div class="filter-value">
-              <button><span></span></button>
+              <button (click)="filterSet('website')"><span [ngClass]="{'active-filter': filter === 'website'}"></span></button>
               <p>Websites</p>
             </div>
 
@@ -65,14 +70,7 @@
         </div>
 
         <div class="projects-box">
-          <app-project-card></app-project-card>
-          <app-project-card></app-project-card>
-          <app-project-card></app-project-card>
-          <app-project-card></app-project-card>
-          <app-project-card></app-project-card>
-          <app-project-card></app-project-card>
-          <app-project-card></app-project-card>
-          <app-project-card></app-project-card>
+          <app-project-card *ngFor="let project of projectsArr" [card]="project"></app-project-card>
         </div>
 
         <div class="paginator">

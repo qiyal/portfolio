@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {MatIconRegistry} from '@angular/material/icon';
 import {DomSanitizer} from '@angular/platform-browser';
+import {DataControlService} from '../../core/service/data-control.service';
 
 @Component({
   selector: 'app-projects',
@@ -8,8 +9,10 @@ import {DomSanitizer} from '@angular/platform-browser';
   styleUrls: ['./projects.component.css']
 })
 export class ProjectsComponent implements OnInit {
+  filter = 'all';
+  projectsArr: any[];
 
-  constructor(iconRegistry: MatIconRegistry, sanitized: DomSanitizer) {
+  constructor(iconRegistry: MatIconRegistry, sanitized: DomSanitizer, private service: DataControlService) {
     iconRegistry.addSvgIcon(
       'websites_custom',
       sanitized.bypassSecurityTrustResourceUrl('../../assets/icons/projects/websites.svg')
@@ -29,5 +32,13 @@ export class ProjectsComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.service.getAllProjects().subscribe(res => {
+      this.projectsArr = res;
+      console.log(this.projectsArr);
+    });
+  }
+
+  filterSet(str: string) {
+    this.filter = str;
   }
 }

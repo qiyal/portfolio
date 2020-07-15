@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup} from '@angular/forms';
-import {User} from '../model/user';
-import {DataControlService} from '../core/service/data-control.service';
+import {User} from '../../model/user';
+import {DataControlService} from '../../core/service/data-control.service';
 
 @Component({
   selector: 'app-contact',
@@ -23,7 +23,11 @@ export class ContactComponent implements OnInit {
     });
     this.service.getUserInfo().subscribe(res => {
       this.user = res;
-    })
+    });
+  }
+
+  sendMessageEmail() {
+    this.service.sendMessage(this.form.getRawValue()).subscribe();
   }
 
 }

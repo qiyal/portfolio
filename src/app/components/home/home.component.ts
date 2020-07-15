@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {DataControlService} from '../core/service/data-control.service';
+import {DataControlService} from '../../core/service/data-control.service';
 
 @Component({
   selector: 'app-home',

@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {ContactComponent} from '../../../contact/contact.component';
+import {ContactComponent} from '../../../components/contact/contact.component';
 import {MatIconModule} from '@angular/material/icon';
 import {ReactiveFormsModule} from '@angular/forms';
 import {ContactRoutingModule} from './contact-routing/contact-routing.module';

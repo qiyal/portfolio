@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import {MatIconRegistry} from '@angular/material/icon';
 import {DomSanitizer} from '@angular/platform-browser';
-import {DataControlService} from '../core/service/data-control.service';
-import {User} from '../model/user';
-import {Education} from '../model/education';
-import {Skill} from '../model/skill';
-import {Experience} from '../model/Experience';
+import {DataControlService} from '../../core/service/data-control.service';
+import {User} from '../../model/user';
+import {Education} from '../../model/education';
+import {Skill} from '../../model/skill';
+import {Experience} from '../../model/Experience';
 
 @Component({
   selector: 'app-about',
