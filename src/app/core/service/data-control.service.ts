@@ -29,12 +29,12 @@ export class DataControlService {
     return this.http.get(this.api + '/skills');
   }
 
-  getAllProjects(): Observable<any> {
-    return this.http.get(this.api + '/projects');
-  }
-
   getProjectsByTypePagination(url: string) {
     return this.http.get(this.apiP + url);
+  }
+
+  getProjectsMostLike() {
+    return this.http.get(this.apiP + '/projects/most-like');
   }
 
   sendMessage(message: any) {

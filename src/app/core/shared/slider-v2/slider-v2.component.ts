@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Project} from '../../../model/Project';
 
 @Component({
   selector: 'app-slider-v2',
@@ -9,7 +10,7 @@ export class SliderV2Component implements OnInit {
   showCardIndex = 2;
   page = 2;
   marginIndex = 0;
-  moveTop = false;
+  @Input() arrCard: Project[];
 
   constructor() { }
 

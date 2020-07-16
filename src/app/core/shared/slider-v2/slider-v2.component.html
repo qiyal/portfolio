@@ -4,138 +4,17 @@
   </button>
   <div class="slider-body">
 
-    <!--   1     -->
-    <div class="slider-card" [ngClass]="{'move-left': marginIndex >= 1}" (click)="clickCard(1)">
+    <div class="slider-card" *ngFor="let card of arrCard, let i = index" [ngClass]="{'move-left': marginIndex >= (i + 1)}" (click)="clickCard((i + 1))">
       <div class="card-img">
         <div class="card-text">
-          <p class="text1">Hotel S+ System</p>
-          <p class="text2">Text text text text text</p>
+          <p class="text1">{{card.title}}</p>
+          <p class="text2">{{card.text}}</p>
         </div>
-        <img src="../../assets/images/projects/slider-1.jpg" alt="">
+        <img src="{{card.urlImage}}" alt="">
       </div>
-      <div class="card-footer" *ngIf="1 === showCardIndex" [ngClass]="{'open': 1 === showCardIndex}">
-        <div>January 06, 2016-1</div>
-        <div>Desktop App</div>
-      </div>
-    </div>
-
-    <!--   2     -->
-    <div class="slider-card" [ngClass]="{'move-left': marginIndex >= 2}" (click)="clickCard(2)">
-      <div class="card-img">
-        <div class="card-text">
-          <p class="text1">Hotel S+ System</p>
-          <p class="text2">Text text text text text</p>
-        </div>
-        <img src="../../assets/images/projects/slider-2.jpg" alt="">
-      </div>
-      <div class="card-footer" *ngIf="2 === showCardIndex" [ngClass]="{'open': 2 === showCardIndex}">
-        <div>January 06, 2016-2</div>
-        <div>Desktop App</div>
-      </div>
-    </div>
-
-    <!--   3     -->
-    <div class="slider-card" [ngClass]="{'move-left': marginIndex >= 3}" (click)="clickCard(3)">
-      <div class="card-img">
-        <div class="card-text">
-          <p class="text1">Hotel S+ System</p>
-          <p class="text2">Text text text text text</p>
-        </div>
-        <img src="../../assets/images/projects/slider-3.jpg" alt="">
-      </div>
-      <div class="card-footer" *ngIf="3 === showCardIndex" [ngClass]="{'open': 3 === showCardIndex}">
-        <div>January 06, 2016-3</div>
-        <div>Desktop App</div>
-      </div>
-    </div>
-
-    <!--   4     -->
-    <div class="slider-card" [ngClass]="{'move-left': marginIndex >= 4}" (click)="clickCard(4)">
-      <div class="card-img">
-        <div class="card-text">
-          <p class="text1">Hotel S+ System</p>
-          <p class="text2">Text text text text text</p>
-        </div>
-        <img src="../../assets/images/projects/slider-1.jpg" alt="">
-      </div>
-      <div class="card-footer" *ngIf="4 === showCardIndex" [ngClass]="{'open': 4 === showCardIndex}">
-        <div>January 06, 2016-4</div>
-        <div>Desktop App</div>
-      </div>
-    </div>
-
-    <!--   5     -->
-    <div class="slider-card" [ngClass]="{'move-left': marginIndex >= 5}" (click)="clickCard(5)">
-      <div class="card-img">
-        <div class="card-text">
-          <p class="text1">Hotel S+ System</p>
-          <p class="text2">Text text text text text</p>
-        </div>
-        <img src="../../assets/images/projects/slider-2.jpg" alt="">
-      </div>
-      <div class="card-footer" *ngIf="5 === showCardIndex" [ngClass]="{'open': 5 === showCardIndex}">
-        <div>January 06, 2016-5</div>
-        <div>Desktop App</div>
-      </div>
-    </div>
-
-    <!--   6     -->
-    <div class="slider-card" [ngClass]="{'move-left': marginIndex >= 6}" (click)="clickCard(6)">
-      <div class="card-img">
-        <div class="card-text">
-          <p class="text1">Hotel S+ System</p>
-          <p class="text2">Text text text text text</p>
-        </div>
-        <img src="../../assets/images/projects/slider-3.jpg" alt="">
-      </div>
-      <div class="card-footer" *ngIf="6 === showCardIndex" [ngClass]="{'open': 6 === showCardIndex}">
-        <div>January 06, 2016-5</div>
-        <div>Desktop App</div>
-      </div>
-    </div>
-
-    <!--   7     -->
-    <div class="slider-card" [ngClass]="{'move-left': marginIndex >= 7}" (click)="clickCard(7)">
-      <div class="card-img">
-        <div class="card-text">
-          <p class="text1">Hotel S+ System</p>
-          <p class="text2">Text text text text text</p>
-        </div>
-        <img src="../../assets/images/projects/slider-1.jpg" alt="">
-      </div>
-      <div class="card-footer" *ngIf="7 === showCardIndex" [ngClass]="{'open': 7 === showCardIndex}">
-        <div>January 06, 2016-5</div>
-        <div>Desktop App</div>
-      </div>
-    </div>
-
-    <!--   8     -->
-    <div class="slider-card" [ngClass]="{'move-left': marginIndex >= 8}" (click)="clickCard(8)">
-      <div class="card-img">
-        <div class="card-text">
-          <p class="text1">Hotel S+ System</p>
-          <p class="text2">Text text text text text</p>
-        </div>
-        <img src="../../assets/images/projects/slider-2.jpg" alt="">
-      </div>
-      <div class="card-footer" *ngIf="8 === showCardIndex" [ngClass]="{'open': 8 === showCardIndex}">
-        <div>January 06, 2016-5</div>
-        <div>Desktop App</div>
-      </div>
-    </div>
-
-    <!--   9   -->
-    <div class="slider-card" [ngClass]="{'move-left': marginIndex >= 9}" (click)="clickCard(9)">
-      <div class="card-img">
-        <div class="card-text">
-          <p class="text1">Hotel S+ System</p>
-          <p class="text2">Text text text text text</p>
-        </div>
-        <img src="../../assets/images/projects/slider-3.jpg" alt="">
-      </div>
-      <div class="card-footer" *ngIf="9 === showCardIndex" [ngClass]="{'open': 9 === showCardIndex}">
-        <div>January 06, 2016-5</div>
-        <div>Desktop App</div>
+      <div class="card-footer" *ngIf="(i + 1) === showCardIndex" [ngClass]="{'open': (i + 1) === showCardIndex}">
+        <div>{{card.date | date}}</div>
+        <div>{{card.type}}</div>
       </div>
     </div>
 

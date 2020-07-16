@@ -15,6 +15,7 @@ export class ProjectsComponent implements OnInit {
   page: any = null;
   url = '/projects';
   pages;
+  arrMostLike: Project[];
 
   constructor(iconRegistry: MatIconRegistry, sanitized: DomSanitizer, private service: DataControlService) {
     iconRegistry.addSvgIcon(
@@ -37,6 +38,7 @@ export class ProjectsComponent implements OnInit {
 
   ngOnInit(): void {
     this.getProjectsByTypePaginator();
+    this.getMostLikeProjects();
   }
 
   filterSet(str: string) {
@@ -54,6 +56,16 @@ export class ProjectsComponent implements OnInit {
     this.service.getProjectsByTypePagination(this.url).subscribe(res => {
       this.page = res;
       this.pages = new Array(this.page.totalPages);
+    });
+  }
+
+  getMostLikeProjects() {
+    let dateMostLike: any;
+
+    this.service.getProjectsMostLike().subscribe(res => {
+      dateMostLike = res;
+      this.arrMostLike = dateMostLike.projects;
+      console.log(this.arrMostLike);
     });
   }
 
