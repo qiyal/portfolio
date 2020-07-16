@@ -70,23 +70,20 @@
         </div>
 
         <div class="projects-box">
-          <app-project-card *ngFor="let project of projectsArr" [card]="project"></app-project-card>
+          <app-project-card *ngFor="let project of page.projects" [card]="project"></app-project-card>
         </div>
 
         <div class="paginator">
           <div class="prev">
-            <button class="action-btn">
+            <button class="action-btn" (click)="showPrev()">
               <mat-icon>arrow_back</mat-icon>
             </button>
           </div>
           <div class="pages">
-            <button class="number-page-btn" [ngClass]="{'active-page': true}">1</button>
-            <button class="number-page-btn">2</button>
-            <button class="number-page-btn">3</button>
-            <button class="number-page-btn">4</button>
+            <button *ngFor="let pageNumber of pages; let i = index" (click)="showPage(i)" class="number-page-btn" [ngClass]="{'active-page': page.currentPage === i}">{{i + 1}}</button>
           </div>
           <div class="next">
-            <button class="action-btn">
+            <button class="action-btn" (click)="showNext()">
               <mat-icon>arrow_forward</mat-icon>
             </button>
           </div>

@@ -175,10 +175,11 @@
   width: 40px;
   height: 40px;
   border: 1px solid #fff;
-  background-color: transparent;
+  background-color: #000;
   display: flex;
   align-items: center;
   justify-content: center;
+  outline: none;
 }
 
 .action-btn mat-icon {
@@ -196,6 +197,10 @@
 
 .pages {
   margin: 0 25px;
+}
+
+.pages button {
+  outline: none;
 }
 
 .number-page-btn {

@@ -7,6 +7,7 @@ import {Observable} from 'rxjs';
 })
 export class DataControlService {
   api = '/user';
+  apiP = '/portfolio';
 
   constructor(private http: HttpClient) {
 
@@ -30,6 +31,10 @@ export class DataControlService {
 
   getAllProjects(): Observable<any> {
     return this.http.get(this.api + '/projects');
+  }
+
+  getProjectsByTypePagination(url: string) {
+    return this.http.get(this.apiP + url);
   }
 
   sendMessage(message: any) {

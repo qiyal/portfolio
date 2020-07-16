@@ -2,6 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {MatIconRegistry} from '@angular/material/icon';
 import {DomSanitizer} from '@angular/platform-browser';
 import {DataControlService} from '../../core/service/data-control.service';
+import {Page} from '../../model/Page';
+import {Project} from '../../model/Project';
 
 @Component({
   selector: 'app-projects',
@@ -10,7 +12,9 @@ import {DataControlService} from '../../core/service/data-control.service';
 })
 export class ProjectsComponent implements OnInit {
   filter = 'all';
-  projectsArr: any[];
+  page: any = null;
+  url = '/projects';
+  pages;
 
   constructor(iconRegistry: MatIconRegistry, sanitized: DomSanitizer, private service: DataControlService) {
     iconRegistry.addSvgIcon(
@@ -32,13 +36,47 @@ export class ProjectsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.service.getAllProjects().subscribe(res => {
-      this.projectsArr = res;
-      console.log(this.projectsArr);
-    });
+    this.getProjectsByTypePaginator();
   }
 
   filterSet(str: string) {
-    this.filter = str;
+    if (str === 'all') {
+      this.filter = str;
+      this.url = '/projects';
+    } else {
+      this.filter = str;
+      this.url = '/projects?' + 'type=' + this.filter;
+    }
+    this.getProjectsByTypePaginator();
+  }
+
+  getProjectsByTypePaginator() {
+    this.service.getProjectsByTypePagination(this.url).subscribe(res => {
+      this.page = res;
+      this.pages = new Array(this.page.totalPages);
+    });
+  }
+
+  showPage(i: number) {
+    if (this.filter === 'all') {
+      this.url = '/projects?page=' + i;
+    } else {
+      this.url = '/projects?type=' + this.filter + '&page=' + i;
+    }
+    this.getProjectsByTypePaginator();
+  }
+
+  showPrev() {
+    if (this.page.currentPage > 0) {
+      this.url = this.filter === 'all' ? '/projects?page=' + (this.page.currentPage - 1) : '/projects?type=' + this.filter + '&page=' + (this.page.currentPage - 1);
+      this.getProjectsByTypePaginator();
+    }
+  }
+
+  showNext() {
+    if (this.page.currentPage < this.page.totalPages - 1) {
+      this.url = this.filter === 'all' ? '/projects?page=' + (this.page.currentPage + 1) : '/projects?type=' + this.filter + '&page=' + (this.page.currentPage + 1);
+      this.getProjectsByTypePaginator();
+    }
   }
 }
