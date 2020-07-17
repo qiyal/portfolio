@@ -6,20 +6,22 @@ import {MatIconModule} from '@angular/material/icon';
 import {FooterModule} from '../footer/footer.module';
 import {SliderV2Component} from '../../shared/slider-v2/slider-v2.component';
 import {ProjectCardComponent} from '../../shared/project-card/project-card.component';
+import {ProjectDetailComponent} from '../../../components/projects/project-detail/project-detail.component';
 
 
 
 @NgModule({
-    declarations: [
-        ProjectsComponent,
-        SliderV2Component,
-        ProjectCardComponent
-    ],
-    imports: [
-        CommonModule,
-        ProjectsRoutingModule,
-        MatIconModule,
-        FooterModule
+  declarations: [
+    ProjectsComponent,
+    SliderV2Component,
+    ProjectCardComponent,
+    ProjectDetailComponent
+  ],
+  imports: [
+    CommonModule,
+    ProjectsRoutingModule,
+    MatIconModule,
+    FooterModule
     ]
 })
 export class ProjectsModule { }
