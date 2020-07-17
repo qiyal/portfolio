@@ -6,6 +6,7 @@ export class Project {
   public type: string;
   public date: Date;
   public urlImage: string;
+  public urlImageSlider: string;
 
 
   constructor(project: Project) {
@@ -16,5 +17,6 @@ export class Project {
     this.type = project.type;
     this.date = project.date;
     this.urlImage = project.urlImage;
+    this.urlImageSlider = project.urlImageSlider;
   }
 }

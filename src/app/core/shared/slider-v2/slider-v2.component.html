@@ -10,7 +10,7 @@
           <p class="text1">{{card.title}}</p>
           <p class="text2">{{card.text}}</p>
         </div>
-        <img src="{{card.urlImage}}" alt="">
+        <img src="{{card.urlImageSlider}}" alt="">
       </div>
       <div class="card-footer" *ngIf="(i + 1) === showCardIndex" [ngClass]="{'open': (i + 1) === showCardIndex}">
         <div>{{card.date | date}}</div>
