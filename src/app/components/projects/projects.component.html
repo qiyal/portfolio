@@ -2,23 +2,23 @@
   <div class="content">
     <h1 class="title"><span>Projects</span></h1>
     <div class="project-types-flex-box">
-      <div class="project-types-child">
+      <div class="project-types-child" (click)="filterSet('website')">
         <mat-icon svgIcon="websites_custom" aria-hidden="false" aria-label="Websites Icon"></mat-icon>
         <h3>Websites</h3>
         <p>UX/UI Desing</p>
       </div>
-      <div class="project-types-child">
-        <mat-icon svgIcon="desktop-apps_custom" aria-hidden="false" aria-label="Websites Icon"></mat-icon>
+      <div class="project-types-child" (click)="filterSet('desktop app')">
+        <mat-icon svgIcon="desktop-apps_custom" aria-hidden="false" aria-label="Desktop Apps Icon"></mat-icon>
         <h3>Desktop Apps</h3>
         <p>JAVA App</p>
       </div>
-      <div class="project-types-child">
-        <mat-icon svgIcon="games_custom" aria-hidden="false" aria-label="Websites Icon"></mat-icon>
+      <div class="project-types-child" (click)="filterSet('game')">
+        <mat-icon svgIcon="games_custom" aria-hidden="false" aria-label="Games Icon"></mat-icon>
         <h3>Games</h3>
         <p>IOS/Android</p>
       </div>
-      <div class="project-types-child">
-        <mat-icon svgIcon="bots_custom" aria-hidden="false" aria-label="Websites Icon"></mat-icon>
+      <div class="project-types-child" (click)="filterSet('bot')">
+        <mat-icon svgIcon="bots_custom" aria-hidden="false" aria-label="Bots Icon"></mat-icon>
         <h3>Bots</h3>
         <p>Telegram/VK</p>
       </div>

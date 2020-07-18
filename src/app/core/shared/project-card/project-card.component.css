@@ -1,6 +1,8 @@
 .project-card {
   flex-basis: 320px;
   margin: 0 22px 40px;
+  transition: all 400ms;
+  outline: none;
 }
 
 .p-card-img {
@@ -49,4 +51,8 @@
 .card-project-type {
   font-family: 'Titillium Web', sans-serif;
   font-size: 12px;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
 }
