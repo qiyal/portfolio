@@ -29,6 +29,10 @@ export class DataControlService {
     return this.http.get(this.api + '/skills');
   }
 
+  getProjectById(id: string): Observable<any> {
+    return this.http.get(this.apiP + '/projects/' + id);
+  }
+
   getProjectsByTypePagination(url: string) {
     return this.http.get(this.apiP + url);
   }
