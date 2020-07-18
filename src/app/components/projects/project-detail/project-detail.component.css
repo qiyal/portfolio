@@ -1,0 +1,79 @@
+.container {
+  width: 100%;
+  min-height: 100%;
+  box-sizing: border-box;
+  background-color: #000;
+  padding-top: 80px;
+}
+
+.content {
+  box-sizing: border-box;
+  margin-bottom: 80px;
+}
+
+.title {
+  font-size: 30px;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  color: #000;
+}
+
+.title span {
+  background-color: #fff;
+  padding: 10px 20px;
+}
+
+.project-image {
+  padding: 58px 26%;
+  box-sizing: border-box;
+}
+
+.project-image img {
+  width: 100%;
+}
+
+.project-text {
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  line-height: 25px;
+  box-sizing: border-box;
+  padding: 0 200px;
+  text-align: center;
+  font-weight: normal;
+}
+
+.link-github {
+  margin-top: 40px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.link-github a {
+  text-decoration: none;
+}
+
+.link-github mat-icon {
+  margin-right: 9px;
+}
+.link-btn-github {
+  height: 50px;
+  padding: 0 25px;
+  background-color: #BF4DC1;
+  color: #fff;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 20px;
+  line-height: 25px;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.link-btn-github:hover {
+  background-color: #9b429d;
+}

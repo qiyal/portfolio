@@ -7,6 +7,7 @@ import {FooterModule} from '../footer/footer.module';
 import {SliderV2Component} from '../../shared/slider-v2/slider-v2.component';
 import {ProjectCardComponent} from '../../shared/project-card/project-card.component';
 import {ProjectDetailComponent} from '../../../components/projects/project-detail/project-detail.component';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
 
 
 
@@ -21,7 +22,8 @@ import {ProjectDetailComponent} from '../../../components/projects/project-detai
     CommonModule,
     ProjectsRoutingModule,
     MatIconModule,
-    FooterModule
-    ]
+    FooterModule,
+    MatButtonToggleModule
+  ]
 })
 export class ProjectsModule { }
