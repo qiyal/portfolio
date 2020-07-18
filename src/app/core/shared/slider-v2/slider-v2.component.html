@@ -14,6 +14,7 @@
       </div>
       <div class="card-footer" *ngIf="(i + 1) === showCardIndex" [ngClass]="{'open': (i + 1) === showCardIndex}">
         <div>{{card.date | date}}</div>
+        <div class="open-detail" routerLink="/projects/{{card.id}}">Open detail</div>
         <div>{{card.type}}</div>
       </div>
     </div>

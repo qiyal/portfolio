@@ -37,6 +37,23 @@
   width: 100%;
 }
 
+.open-detail {
+  display: inline-block;
+  border-radius: 25px;
+  padding:  10px 20px;
+  box-sizing: border-box;
+  border: 1px solid black;
+  transition: all 0.3s;
+  outline: none;
+  cursor: pointer;
+}
+
+.open-detail:hover {
+  background-color: #000;
+  color: #fff;
+  transform: translateY(-5px);
+}
+
 .card-footer {
   width: 100%;
   height: 64px;
