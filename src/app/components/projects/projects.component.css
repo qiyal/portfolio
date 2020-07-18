@@ -28,7 +28,6 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  /*border: 1px solid red;*/
 }
 
 .project-types-child {
@@ -39,7 +38,6 @@
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  /*border: 1px solid yellow;*/
   background-color: #fff;
   font-family: 'Roboto Mono', monospace;
   margin-top: 55px;
@@ -93,14 +91,12 @@
 .projects-block {
   width: 100%;
   box-sizing: border-box;
-  /*border: 1px solid red;*/
 }
 
 .filter {
   width: 100%;
   box-sizing: border-box;
   position: relative;
-  /*border: 1px solid red;*/
 }
 
 .filter-line {
@@ -127,7 +123,6 @@
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
-  /*border: 1px solid green;*/
 }
 
 .filter-value button {
@@ -152,7 +147,6 @@
 
 .active-filter {
   background-color: #fff;
-  /*border: 1px solid #BF4DC1!important;*/
 }
 
 .projects-box {
@@ -161,7 +155,6 @@
   flex-wrap: wrap;
   justify-content: space-between;
   box-sizing: border-box;
-  /*border: 1px solid green;*/
 }
 
 .paginator {
