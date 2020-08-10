@@ -39,5 +39,4 @@ export class AboutComponent implements OnInit {
       this.skills = res;
     });
   }
-
 }

@@ -1,17 +1,17 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
+import {Project} from '../../model/Project';
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class DataControlService {
   api = '/user';
   apiP = '/portfolio';
 
-  constructor(private http: HttpClient) {
-
-  }
+  constructor(private http: HttpClient) {}
 
   getUserInfo(): Observable<any>{
     return this.http.get(this.api + '/me');
@@ -43,5 +43,9 @@ export class DataControlService {
 
   sendMessage(message: any) {
     return this.http.post(this.api + '/sent/email', message);
+  }
+
+  putProjectView(project: Project) {
+    return this.http.put(this.apiP + '/projects/update', project);
   }
 }

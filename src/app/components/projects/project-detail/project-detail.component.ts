@@ -33,7 +33,12 @@ export class ProjectDetailComponent implements OnInit {
     const id = this.route.snapshot.paramMap.get('id');
     this.service.getProjectById(id).subscribe(res => {
       this.project = res;
+      this.project.view++;
+      this.updateView();
     });
   }
 
+  updateView() {
+    this.service.putProjectView(this.project).subscribe();
+  }
 }

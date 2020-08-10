@@ -29,5 +29,4 @@ export class ContactComponent implements OnInit {
   sendMessageEmail() {
     this.service.sendMessage(this.form.getRawValue()).subscribe();
   }
-
 }

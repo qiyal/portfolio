@@ -8,7 +8,6 @@ import {DataControlService} from '../../core/service/data-control.service';
 })
 export class HomeComponent implements OnInit {
   user: any[];
-  start = true;
 
   constructor(private service: DataControlService) { }
 
@@ -16,14 +15,5 @@ export class HomeComponent implements OnInit {
     this.service.getUserInfo().subscribe(res => {
       this.user = res;
     });
-    this.startAnimation();
   }
-
-  startAnimation() {
-    setInterval(() => {
-      this.start = this.start ? false : true;
-      console.log(this.start);
-    }, 1000);
-  }
-
 }

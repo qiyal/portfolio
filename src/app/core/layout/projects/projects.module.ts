@@ -9,8 +9,6 @@ import {ProjectCardComponent} from '../../shared/project-card/project-card.compo
 import {ProjectDetailComponent} from '../../../components/projects/project-detail/project-detail.component';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 
-
-
 @NgModule({
   declarations: [
     ProjectsComponent,

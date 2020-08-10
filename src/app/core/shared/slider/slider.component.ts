@@ -1,5 +1,4 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Education} from '../../../model/education';
 
 @Component({
   selector: 'app-slider',
@@ -36,5 +35,4 @@ export class SliderComponent implements OnInit {
     }
     console.log("index: " + this.index);
   }
-
 }

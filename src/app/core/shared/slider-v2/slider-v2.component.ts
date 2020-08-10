@@ -36,5 +36,4 @@ export class SliderV2Component implements OnInit {
   clickCard(index: number) {
     this.showCardIndex = index;
   }
-
 }
